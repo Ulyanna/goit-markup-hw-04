@@ -59,6 +59,18 @@ img {
 .text {
   text-decoration: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* Хедер */
 .header {
@@ -208,30 +220,21 @@ img {
   content: '';
   height: 120px;
   background-color: var(--bg-grey);
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: 50% 50%;
 }
 .benefits-item:first-child::before {
   background-image: url(../images/antenna\ 1.svg);
-  background-repeat: no-repeat;
-  background-size: auto auto;
-  background-position: 50% 50%;
 }
 .benefits-item:nth-child(2)::before {
   background-image: url(../images/clock\ 1.svg);
-  background-repeat: no-repeat;
-  background-size: auto auto;
-  background-position: 50% 50%;
 }
 .benefits-item:nth-child(3)::before {
   background-image: url(../images/diagram\ 1.svg);
-  background-repeat: no-repeat;
-  background-size: auto auto;
-  background-position: 50% 50%;
 }
 .benefits-item:last-child::before {
   background-image: url(../images/astronaut\ 1.svg);
-  background-repeat: no-repeat;
-  background-size: auto auto;
-  background-position: 50% 50%;
 }
 
 .benefits-title {
