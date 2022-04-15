@@ -6,6 +6,7 @@
   --contacts-footer-color: rgba(255, 255, 255, 0.6);
   --bg-hero-footer: #2f303a;
   --bg-grey: #f5f4fa;
+  --icon-color: #afb1b8;
   --card-set-gap: 30px;
 }
 body {
@@ -138,7 +139,8 @@ img {
   margin-right: 50px;
 }
 .contacts-block .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -151,6 +153,11 @@ img {
 .contacts-block .link:hover,
 .contacts-block .link:focus {
   color: var(--accent-color);
+}
+
+.contacts-block-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Герой */
@@ -312,21 +319,137 @@ img {
   text-align: center;
 }
 .team-list p {
-  margin-bottom: var(--card-set-gap);
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
+/*---------------------- Соц-сети Команда--------------------------- */
+.social-icons-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  padding-bottom: 30px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.social-icons-item {
+  flex-basis: calc(100% / 4 - 10px);
+  margin-right: 10px;
+}
+.social-icons-item:last-child {
+  margin-right: 0;
+}
+.social-icons-item > a {
+  display: block;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: var(--icon-color);
+}
+.social-icons-item > a:hover {
+  display: block;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+.icon {
+  fill: currentColor;
+}
 
+/*-------------- Наши клиенты --------------------------------*/
+.our-clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--card-set-gap));
+}
+.our-clients-item {
+  flex-basis: calc(100% / 6 - var(--card-set-gap));
+  margin-right: var(--card-set-gap);
+}
+.our-clients-item:last-child {
+  margin-right: 0;
+}
+.our-clients-item > a {
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  color: var(--icon-color);
+}
+.our-clients-item > a:hover,
+.our-clients-item > a:focus {
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  color: var(--accent-color);
+}
+.our-clients-icon {
+  fill: currentColor;
+}
 /* Футтер */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-hero-footer);
 }
-.logo-footer {
-  display: inline-block;
+
+/* ------------------------------------------ */
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-social-box {
+  margin-left: 70px;
+}
+.footer-title {
   margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+}
+.footer-social-item > a {
+  display: block;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+}
+.footer-social-item > a:hover {
+  display: block;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+.footer-social-item {
+  flex-basis: calc(100% / 4 - 10px);
+  margin-right: 10px;
+}
+.footer-social-item:last-child {
+  margin-right: 0;
+}
+.icon-footer {
+  fill: currentColor;
+}
+/* ------------------------------------------ */
+
+.logo-footer {
+  display: inline;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -336,12 +459,14 @@ img {
 }
 .logo-footer-first {
   display: inline-block;
+  margin-bottom: 20px;
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
 }
+
 .contacts-footer .link-address {
   display: inline-block;
   margin-bottom: 9px;
@@ -369,6 +494,7 @@ img {
 .contacts-footer .link:focus {
   color: var(--accent-color);
 }
+
 /* Страница Портфолио Фильтр*/
 .filters-list {
   display: flex;
@@ -437,6 +563,12 @@ img {
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
   background-color: var(--white-color);
+}
+.works-list-item > a:hover,
+.works-list-item > a:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-box {
   padding-top: 20px;
