@@ -304,6 +304,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .team-item > img {
   margin-bottom: var(--card-set-gap);
 }
@@ -327,11 +328,9 @@ img {
 /*---------------------- Соц-сети Команда--------------------------- */
 .social-icons-list {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -10px;
-  padding-bottom: 30px;
-  padding-right: 32px;
-  padding-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 30px;
+  margin-left: 32px;
 }
 .social-icons-item {
   flex-basis: calc(100% / 4 - 10px);
@@ -373,16 +372,20 @@ img {
   margin-right: 0;
 }
 .our-clients-item > a {
-  display: block;
-  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
 }
 .our-clients-item > a:hover,
 .our-clients-item > a:focus {
-  display: block;
-  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   color: var(--accent-color);
